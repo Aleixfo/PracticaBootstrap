@@ -1,0 +1,270 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#div-nav #nav-esquerra svg {
+  display: none;
+}
+#div-nav #nav-esquerra img {
+  margin-left: 10px;
+}
+#div-nav #nav-centre {
+  text-align: center;
+}
+#div-nav #nav-centre a {
+  text-decoration: none;
+  color: black;
+  margin-right: 9px;
+  margin-left: 9px;
+}
+#div-nav #nav-centre a:hover {
+  color: gray;
+}
+#div-nav #nav-dreta svg {
+  float: right;
+  height: 30px;
+  width: 26px;
+  margin-right: 20px;
+}
+
+#contenidor #destacat1 {
+  height: 100%;
+}
+#contenidor #destacat1 .carousel-inner .carousel-item img {
+  height: 550px;
+}
+#contenidor #destacat2 {
+  height: 450px;
+  background-image: url("../img/campo.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+#contenidor #destacat2 .standup {
+  height: auto;
+  width: 25%;
+  padding-top: 70px;
+  color: white;
+  /* Componenets Div-Stand Up */
+}
+#contenidor #destacat2 .standup .titol-standup {
+  letter-spacing: 2px;
+  font-size: 30px;
+  font-weight: 900;
+}
+#contenidor #destacat2 .standup .subtitol-standup {
+  font-size: 15px;
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+#contenidor #destacat2 .standup .p-standup {
+  font-size: 13px;
+  font-weight: 600;
+}
+#contenidor #tenda {
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+#contenidor #tenda #newpro {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+#contenidor #tenda #newpro #div-titol-tenda {
+  width: 70%;
+  text-align: center;
+}
+#contenidor #tenda #newpro #div-viewall {
+  width: 15%;
+  text-align: right;
+}
+#contenidor #tenda #newpro #text-viewall {
+  margin-top: 5px;
+  text-decoration: underline;
+  font-size: 14px;
+  font-weight: 600;
+}
+#contenidor #tenda #newpro .titol-tenda {
+  font-weight: 900;
+  font-size: 1.5em;
+}
+#contenidor #tenda .card {
+  position: relative;
+}
+#contenidor #tenda .card .div-item-producte {
+  position: absolute;
+  top: 0;
+  height: 7%;
+  width: 100%;
+}
+#contenidor #tenda .card .div-item-producte .item-producte-bundle {
+  float: right;
+  text-align: center;
+  width: 12%;
+  height: 70%;
+  background-color: #161414;
+  color: whitesmoke;
+  margin: 15px;
+}
+#contenidor #tenda .card .div-item-producte svg {
+  margin: 15px;
+}
+#contenidor #tenda .card img {
+  height: 400px;
+}
+#contenidor #tenda .card .marca-producte {
+  color: grey;
+  font-size: 13px;
+  font-weight: 500;
+}
+#contenidor #tenda .card .nom-producte {
+  font-size: 15px;
+  font-weight: 800;
+}
+#contenidor #tenda .card .nom-producte span {
+  float: right;
+}
+#contenidor #tenda .card .preu-producte {
+  font-size: 14px;
+  font-weight: 900;
+}
+#contenidor #tenda .card .preu-producte .lletra-tatxada {
+  text-decoration: line-through;
+  color: gray;
+}
+#contenidor #tenda .card .preu-producte .lletra-vermella {
+  color: #da2a2a;
+}
+#contenidor #tenda .card .icono-color {
+  border-radius: 50%;
+  height: 25px;
+  margin-right: 5px;
+}
+#contenidor #tenda .card .icono-color:hover {
+  border: 2px solid black;
+}
+#contenidor #opinio {
+  margin-top: 50px;
+  min-height: 700px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+}
+#contenidor #opinio #titol-opinio {
+  height: 25%;
+  text-align: center;
+}
+#contenidor #opinio #titol-opinio .titol-introduccio {
+  font-weight: 900;
+  font-size: 25px;
+  opacity: 0.8;
+}
+#contenidor #opinio #titol-opinio .subtitol-introduccio {
+  margin-bottom: 30px;
+  font-weight: bold;
+  opacity: 0.8;
+}
+#contenidor #opinio .customer {
+  background-image: url("../img/custoer.PNG");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 65%;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+#contenidor #opinio .customer .fletxa-esquerra {
+  width: 60px;
+  height: 10%;
+  padding-left: 1%;
+}
+#contenidor #opinio .customer .fletxa-esquerra .fletxa-esquerra * {
+  height: 100%;
+  width: 70%;
+}
+#contenidor #opinio .customer .fletxa-dreta {
+  width: 60px;
+  height: 10%;
+  padding-left: 1%;
+}
+#contenidor #opinio .customer .fletxa-dreta .fletxa-dreta * {
+  height: 100%;
+  width: 70%;
+}
+
+/* CODI A COLOCAR (SECCIO OPINIO) */
+.div-customer,
+.div-customer-mobile {
+  width: 18%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.div-customer div *,
+.div-customer-mobile {
+  text-align: center;
+}
+
+.foto-customer {
+  height: 170px;
+  width: 170px;
+  background-image: url("../img/customer-foto.PNG");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: 50%;
+}
+
+.estrelles-customer {
+  height: 7%;
+  width: 100%;
+  text-align: center;
+}
+
+.estrelles-customer svg {
+  height: 100%;
+  width: 16%;
+}
+
+.text-customer {
+  overflow: hidden;
+  font-weight: 600;
+  height: 20%;
+  width: 100%;
+}
+
+.reds-customer {
+  opacity: 0.8;
+  color: gray;
+  font-weight: 500;
+  font-size: 17px;
+  height: 10%;
+  width: 100%;
+}
+
+/* */
+.nav-pointer {
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  padding-top: 20px;
+}
+
+#nav svg {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+#nav svg:first-of-type {
+  background-color: black;
+  border-radius: 100%;
+}
