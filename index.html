@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SASS (TEMPORAL-DESARROLLO) -->
-    <link rel="stylesheet" href="css/inde.css">
+    <!-- CSS des carrito no ha de ser bootstrap -->
+    <link rel="stylesheet" href="css/carrito.css">
     <!-- Css BootStrap -->
-    <link href="./dist/css-bootstrap/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- <link href="./dist/css-bootstrap/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
     <!-- JavaScript BootStrap -->
     <script src="./dist/js-bootstrap/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- Llibreria JQuery -->
@@ -20,281 +21,539 @@
 
 <body>
 
-    <nav class="navbar sticky-top navbar-light bg-white">
-        <div class="col-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list d-none" viewBox="0 0 16 16">
+    <div class="container-fluid">
+        <!-- NAVBAR -->
+        <div class="row">
+            <nav class="navbar sticky-top navbar-light bg-white">
+                <div class="col-6 col-md-3 col-lg-3 col-xl-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list d-md-none d-lg-none d-xl-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenuMobile" aria-controls="offcanvasMenuMobile" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
             </svg>
-            <img src="img/icono1.PNG" alt="Girl in a jacket" class="ms-3">
-        </div>
-        <div class="col-6 text-center dark">
-            <a class="text-decoration-none text-reset me-4" href="index.html">Home</a>
-            <a class="text-decoration-none text-reset me-4" href="producte.html">Producte</a>
-            <a class="text-decoration-none text-reset me-4" href="carrito.html">Carrito</a>
-            <a class="text-decoration-none text-reset me-4" href="...">Contact</a>
-        </div>
-        <div class="col-3 text-end">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart3 ms-3" viewBox="0 0 16 16">
-                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                    <img src="img/icono1.PNG" alt="Girl in a jacket" class="ms-3">
+                </div>
+                <div class="d-none d-md-inline d-lg-inline d-xl-inline col-6 text-center dark">
+                    <a class="text-decoration-none text-reset me-4" href="index.html">Home</a>
+                    <a class="text-decoration-none text-reset me-4" href="producte.html">Producte</a>
+                    <a class="text-decoration-none text-reset me-4" href="carrito.html">Carrito</a>
+                    <a class="text-decoration-none text-reset me-4" href="...">Contact</a>
+                </div>
+                <div class="col-6 col-md-3 col-lg-3 col-xl-3 text-end">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-search ms-3 me-3 " viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
             </svg>
 
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person ms-3" viewBox="0 0 16 16">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person ms-3" viewBox="0 0 16 16">
                 <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
             </svg>
 
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-search ms-3 me-3 " viewBox="0 0 16 16">
-                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart3 ms-3" viewBox="0 0 16 16" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
             </svg>
+
+                </div>
+
+
+            </nav>
         </div>
 
+        <!-- OFF Canvas Menu Mobile -->
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasMenuMobile" aria-labelledby="offcanvasMenuMobileLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Navegació</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      Shop
+                    </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                Aplication
+                            </div>
+                            <div class="accordion-body">
+                                Design & Styles
+                            </div>
+                            <div class="accordion-body">
+                                Styles
+                            </div>
+                            <div class="accordion-body">
+                                FanBlade
+                            </div>
+                            <div class="accordion-body">
+                                WallCode
+                            </div>
+                            <div class="accordion-body">
+                                Telebravo
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      Company
+                    </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                About Us
+                            </div>
+                            <div class="accordion-body">
+                                Blog
+                            </div>
+                            <div class="accordion-body">
+                                Email
+                            </div>
+                            <div class="accordion-body">
+                                Contact
+                            </div>
+                            <div class="accordion-body">
+                                Private Rights
+                            </div>
+                            <div class="accordion-body">
+                                Copyright
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      Support
+                    </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                Help & FAQs
+                            </div>
+                            <div class="accordion-body">
+                                Pathman
+                            </div>
+                            <div class="accordion-body">
+                                UiPath
+                            </div>
+                            <div class="accordion-body">
+                                Politics
+                            </div>
+                            <div class="accordion-body">
+                                Security
+                            </div>
+                            <div class="accordion-body">
+                                Policys
+                            </div>
 
-    </nav>
+                        </div>
+                    </div>
+                </div>
+                <p class="border-bottom border-top p-3">Blog</p>
+                <p class="border-bottom p-3">Surfboard</p>
+                <p class="border-bottom p-3">Contact</p>
 
+                <p class="border-bottom p-3">My Wish List</p>
+                <p class="border-bottom p-3">Sign In</p>
+                <p class="border-bottom p-3">Create an account</p>
 
-    <div class="container-fluid mt-2">
+            </div>
+        </div>
+
         <!-- el fluid indica que agafi el 100% del width i evitar que es centri a la pantalla -->
 
-        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a class="text-reset text-decoration-none" href="#">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Productes</li>
-            </ol>
-        </nav>
-    </div>
+        <!-- BREADCRUMB-->
+        <div class="row mt-2">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-reset text-decoration-none" href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Productes</li>
+                </ol>
+            </nav>
+        </div>
 
-    <!-- Row destacat1 -->
-    <div class="row">
+        <!-- Row destacat1 -->
+        <div class="row overflow-hidden" style="height: 375px;">
 
-        <div class="col-6"></div>
-        <div class="col-6">
+            <div class="col-6 h-100">
 
-            <!-- CARROUSEL (3er Exemple)-->
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="row h-100 d-flex align-items-center ms-5">
 
-                <!-- Indicadors de pestaña carrousel -->
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <div class="col-8 h-75">
+
+                        <p class="fs-1 fw-bold">New Arrivals</p>
+                        <p class="fs-4 fw-bold">From $399</p>
+                        <p class="fs-6">Quisquemos sodales suscipit tortor condimentum de cosmo lacus maleifend menean blanditos.
+                        </p>
+                        <br>
+                        <input type="button" class="btn border-dark btn-lg" value="SHOP NOW ">
+
+                    </div>
+
                 </div>
 
-                <!-- Div que conte les imatges -->
-                <div class="carousel-inner">
-                    <!-- Minim hi ha d'haver una classe active, de lo contrari no es mostrara el carrousel -->
-                    <div class="carousel-item active">
-                        <img src="img/campo.png" class="d-block w-100" alt="Campo">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/campo.png" class="d-block w-100" alt="Vinito">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/campo.png" class="d-block w-100" alt="Vinoteca">
-                    </div>
-                </div>
+            </div>
+            <div class="col-6">
 
-                <!-- Botons laterals de navegació del carrousel -->
-                <!-- Boto previo (esquerra) -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <!-- CARROUSEL (3er Exemple)-->
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+                    <!-- Indicadors de pestaña carrousel -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+
+                    <!-- Div que conte les imatges -->
+                    <div class="carousel-inner">
+                        <!-- Minim hi ha d'haver una classe active, de lo contrari no es mostrara el carrousel -->
+                        <div class="carousel-item active">
+                            <img src="img/EE-Murcia-500x175.jpg" class="d-block w-100" alt="Campo">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/EE-Idae-500x175.jpg" class="d-block w-100" alt="Vinito">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/aaaa.jfif" class="d-block w-100" alt="Vinoteca">
+                        </div>
+                    </div>
+
+                    <!-- Botons laterals de navegació del carrousel -->
+                    <!-- Boto previo (esquerra) -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
                 </button>
-                <!-- Boto previo (dreta) -->
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <!-- Boto previo (dreta) -->
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
                 </button>
 
-            </div>
-            <!-- FI CARROUSEL -->
-
-        </div>
-
-
-
-    </div>
-
-    <!-- Row destacat2 -->
-    <div class="row bg-dark d-flex flex-row-reverse">
-
-        <div class="col-3 m-5 text-white">
-
-            <p class="">Stand Up</p>
-            <p class=" ">Paddle Board</p>
-            <p class=" ">From $4.99</p>
-            <p class=" ">Quisquemos sodales suscipit tortor condimentum de<br>cosmo lacus maleifend menean blanditos.
-            </p>
-            <br>
-            <input type="button " class="btn btn-dark btn-lg " value="SHOP NOW ">
-
-        </div>
-
-    </div>
-
-    <!-- Row tenda -->
-    <div class="row " id="tenda ">
-
-        <div class="col-12 ">
-
-            <div class="row">
-
-                <div class="col-2 bg-light "></div>
-                <div class="col-8 text-center">
-                    <p class="">New Products</p>
                 </div>
-                <div class="col-2 text-end">
-                    <p class="me-3">View All</p>
-                </div>
-
-
+                <!-- FI CARROUSEL -->
 
             </div>
 
-            <!-- ROW -->
-            <div class="row ">
 
-                <div class="col-3 ">
-                    <div class="card" style="width: 100%; ">
 
-                        <div class="">
-                            <svg xmlns="http://www.w3.org/2000/svg " width="20 " height="20 " fill="currentColor " class="bi bi-heart " viewBox="0 0 16 16 ">
+        </div>
+
+        <!-- Row destacat2 -->
+        <div class="row d-flex flex-row-reverse align-items-center mb-2 overflow-hidden" style="height:375px;background-image: url('img/campo.png');background-size: cover;background-repeat: no-repeat;">
+
+            <div class="col-3 text-white h-75 me-5">
+
+                <span class="fs-1 fw-bold">Stand Up</span><br>
+                <span class="fs-1 fw-bold">Paddle Board</span><br>
+                <span class="fs-4 fw-bold">From $4.99</span><br>
+                <span class="fs-6">Quisquemos sodales suscipit tortor condimentum de cosmo lacus maleifend menean blanditos.</span>
+                <br><br>
+                <input type="button" class="btn btn-dark btn-lg" value="SHOP NOW ">
+
+            </div>
+
+        </div>
+
+        <!-- Row tenda -->
+        <div class="row">
+
+            <div class="col-12">
+
+                <div class="row">
+
+                    <div class="col-2"></div>
+                    <div class="col-8 text-center">
+                        <p class="fw-bold">New Products</p>
+                    </div>
+                    <div class="col-2 text-end">
+                        <p class="me-3 text-decoration-underline">View All</p>
+                    </div>
+
+                </div>
+
+                <!-- ROW -->
+                <div class="row mb-3">
+
+                    <div class="col-md-3 col-lg-3 col-xl-3 col-6">
+
+                        <div class="card" style="width: 100%;" data-bs-toggle="modal" data-bs-target="#modalProducte">
+
+                            <div class="p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg " width="20 " height="20 " fill="currentColor " class="bi bi-heart " viewBox="0 0 16 16 ">
                                 <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z "/>
                             </svg>
-                            <p class="item-producte-bundle ">Bundle</p>
+                                <span class="item-producte-bundle float-end bg-warning rounded p-1">Bundle</span>
+                            </div>
+
+                            <img src="img/botella1.jpg" class="card-img-top" style="height:500px;" alt="img/botella1.jpg ">
+
+                            <ul class="list-group list-group-flush ">
+                                <li class="list-group-item">ELLA-HALOTHEMES</li>
+                                <li class="list-group-item"> <span class="fw-bold">Dlass Manten Tacitos</span><span class="float-end">Black</span></li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </li>
+                                <li class="list-group-item fw-bold">$59.00</li>
+                                <li class="list-group-item ">
+                                    <span class="rounded-circle" style="background-color: rgb(236, 137, 22); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                    <span class="rounded-circle" style="background-color: rgb(76, 177, 76); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                    <span class="rounded-circle" style="background-color: rgb(79, 87, 206); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                </li>
+                            </ul>
+
                         </div>
-
-                        <img src="img/botella1.jpg " class="card-img-top " alt="img/botella1.jpg ">
-
-                        <ul class="list-group list-group-flush ">
-                            <li class="list-group-item">ELLA-HALOTHEMES</li>
-                            <li class="list-group-item">Dlass Manten Tacitos Del <span class="">Black</span></li>
-                            <li class="list-group-item ">
-                                <i class="fas fa-star "></i>
-                                <i class="fas fa-star "></i>
-                                <i class="fas fa-star-half-alt "></i>
-                                <i class="far fa-star "></i>
-                                <i class="far fa-star "></i>
-                            </li>
-                            <li class="list-group-item">$59.00</li>
-                            <li class="list-group-item ">
-                                <span class="" style="background-color: rgb(236, 137, 22); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                <span class="" style="background-color: rgb(76, 177, 76); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                <span class="" style="background-color: rgb(79, 87, 206); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                            </li>
-                        </ul>
-
                     </div>
+                    <div class="col-md-3 col-lg-3 col-xl-3 col-6">
+
+                        <div class="card" style="width: 100%; " data-bs-toggle="modal" data-bs-target="#modalProducte">
+
+                            <div class="p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg " width="20 " height="20 " fill="currentColor " class="bi bi-heart " viewBox="0 0 16 16 ">
+                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z "/>
+                            </svg>
+                                <span class="item-producte-bundle float-end bg-warning rounded p-1">Bundle</span>
+                            </div>
+
+                            <img src="img/botella1.jpg" class="card-img-top" style="height:500px;" alt="img/botella1.jpg ">
+
+                            <ul class="list-group list-group-flush ">
+                                <li class="list-group-item">ELLA-HALOTHEMES</li>
+                                <li class="list-group-item"> <span class="fw-bold">Dlass Manten Tacitos</span><span class="float-end">Black</span></li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </li>
+                                <li class="list-group-item fw-bold">$59.00</li>
+                                <li class="list-group-item ">
+                                    <span class="rounded-circle" style="background-color: rgb(236, 137, 22); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                    <span class="rounded-circle" style="background-color: rgb(76, 177, 76); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                    <span class="rounded-circle" style="background-color: rgb(79, 87, 206); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="d-none d-md-inline d-xl-inline d-lg-inline col-3">
+
+                        <div class="card" style="width: 100%; " data-bs-toggle="modal" data-bs-target="#modalProducte">
+
+                            <div class="p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg " width="20 " height="20 " fill="currentColor " class="bi bi-heart " viewBox="0 0 16 16 ">
+                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z "/>
+                            </svg>
+                                <span class="item-producte-bundle float-end bg-warning rounded p-1">Bundle</span>
+                            </div>
+
+                            <img src="img/botella1.jpg" class="card-img-top" style="height:500px;" alt="img/botella1.jpg ">
+
+                            <ul class="list-group list-group-flush ">
+                                <li class="list-group-item">ELLA-HALOTHEMES</li>
+                                <li class="list-group-item"> <span class="fw-bold">Dlass Manten Tacitos</span><span class="float-end">Black</span></li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </li>
+                                <li class="list-group-item fw-bold">$59.00</li>
+                                <li class="list-group-item ">
+                                    <span class="rounded-circle" style="background-color: rgb(236, 137, 22); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                    <span class="rounded-circle" style="background-color: rgb(76, 177, 76); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                    <span class="rounded-circle" style="background-color: rgb(79, 87, 206); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="d-none d-md-inline d-xl-inline d-lg-inline col-3">
+
+                        <div class="card" style="width: 100%; " data-bs-toggle="modal" data-bs-target="#modalProducte">
+
+                            <div class="p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg " width="20 " height="20 " fill="currentColor " class="bi bi-heart " viewBox="0 0 16 16 ">
+                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z "/>
+                            </svg>
+                                <span class="item-producte-bundle float-end bg-warning rounded p-1">Bundle</span>
+                            </div>
+
+                            <img src="img/botella1.jpg" class="card-img-top" style="height:500px;" alt="img/botella1.jpg ">
+
+                            <ul class="list-group list-group-flush ">
+                                <li class="list-group-item">ELLA-HALOTHEMES</li>
+                                <li class="list-group-item"> <span class="fw-bold">Dlass Manten Tacitos</span><span class="float-end">Black</span></li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </li>
+                                <li class="list-group-item fw-bold">$59.00</li>
+                                <li class="list-group-item ">
+                                    <span class="rounded-circle" style="background-color: rgb(236, 137, 22); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                    <span class="rounded-circle" style="background-color: rgb(76, 177, 76); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                    <span class="rounded-circle" style="background-color: rgb(79, 87, 206); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="col-3 ">
-                    <div class="card " style="width: 100%; ">
+                <!-- ROW -->
+                <div class="row mb-3">
 
-                        <div class="div-item-producte ">
-                            <svg xmlns="http://www.w3.org/2000/svg " width="20 " height="20 " fill="currentColor " class="bi bi-heart " viewBox="0 0 16 16 ">
-                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8
-            2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z "/>
-                                </svg>
-                            <p class="item-producte-bundle ">Bundle</p>
+                    <div class="col-md-3 col-lg-3 col-xl-3 col-6">
+
+                        <div class="card" style="width: 100%;" data-bs-toggle="modal" data-bs-target="#modalProducte">
+
+                            <div class="p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg " width="20 " height="20 " fill="currentColor " class="bi bi-heart " viewBox="0 0 16 16 ">
+                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z "/>
+                            </svg>
+                                <span class="item-producte-bundle float-end bg-warning rounded p-1">Bundle</span>
+                            </div>
+
+                            <img src="img/botella1.jpg" class="card-img-top" style="height:500px;" alt="img/botella1.jpg ">
+
+                            <ul class="list-group list-group-flush ">
+                                <li class="list-group-item">ELLA-HALOTHEMES</li>
+                                <li class="list-group-item"> <span class="fw-bold">Dlass Manten Tacitos</span><span class="float-end">Black</span></li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </li>
+                                <li class="list-group-item fw-bold">$59.00</li>
+                                <li class="list-group-item ">
+                                    <span class="rounded-circle" style="background-color: rgb(236, 137, 22); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                    <span class="rounded-circle" style="background-color: rgb(76, 177, 76); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                    <span class="rounded-circle" style="background-color: rgb(79, 87, 206); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                </li>
+                            </ul>
+
                         </div>
-
-                        <img src="img/botella1.jpg " class="card-img-top" alt="img/botella1.jpg ">
-
-                        <ul class="list-group list-group-flush ">
-                            <li class="list-group-item marca-producte ">ELLA-HALOTHEMES</li>
-                            <li class="list-group-item nom-producte ">Dlass Manten Tacitos Del <span class="nom-producte ">Black</span></li>
-                            <li class="list-group-item ">
-                                <i class="fas fa-star "></i>
-                                <i class="fas fa-star "></i>
-                                <i class="fas fa-star-half-alt "></i>
-                                <i class="far fa-star "></i>
-                                <i class="far fa-star "></i>
-                            </li>
-                            <li class="list-group-item "><span class="">$429.99</span>&nbsp;&nbsp;<span class="">$399.99</span></li>
-                            <li class="list-group-item ">
-                                <span class="icono-color " style="background-color: rgb(236, 137, 22); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                <span class="icono-color " style="background-color: rgb(76, 177, 76); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                <span class="icono-color " style="background-color: rgb(79, 87, 206); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                            </li>
-                        </ul>
-
                     </div>
-                </div>
+                    <div class="col-md-3 col-lg-3 col-xl-3 col-6">
 
-                <div class="col-3 ">
-                    <div class="card " style="width: 100%; ">
+                        <div class="card" style="width: 100%; " data-bs-toggle="modal" data-bs-target="#modalProducte">
 
-                        <div class="div-item-producte ">
-                            <svg xmlns="http://www.w3.org/2000/svg " width="20 " height="20 " fill="currentColor " class="bi bi-heart " viewBox="0 0 16 16 ">
-                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8
-            2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z "/>
-                                </svg>
-                            <p class="item-producte-bundle ">Bundle</p>
+                            <div class="p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg " width="20 " height="20 " fill="currentColor " class="bi bi-heart " viewBox="0 0 16 16 ">
+                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z "/>
+                            </svg>
+                                <span class="item-producte-bundle float-end bg-warning rounded p-1">Bundle</span>
+                            </div>
+
+                            <img src="img/botella1.jpg" class="card-img-top" style="height:500px;" alt="img/botella1.jpg ">
+
+                            <ul class="list-group list-group-flush ">
+                                <li class="list-group-item">ELLA-HALOTHEMES</li>
+                                <li class="list-group-item"> <span class="fw-bold">Dlass Manten Tacitos</span><span class="float-end">Black</span></li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </li>
+                                <li class="list-group-item fw-bold">$59.00</li>
+                                <li class="list-group-item ">
+                                    <span class="rounded-circle" style="background-color: rgb(236, 137, 22); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                    <span class="rounded-circle" style="background-color: rgb(76, 177, 76); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                    <span class="rounded-circle" style="background-color: rgb(79, 87, 206); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                </li>
+                            </ul>
+
                         </div>
-
-                        <img src="img/botella1.jpg " class="card-img-top " alt="img/botella1.jpg ">
-
-                        <ul class="list-group list-group-flush ">
-                            <li class="list-group-item marca-producte ">ELLA-HALOTHEMES</li>
-                            <li class="list-group-item nom-producte ">Dlass Manten Tacitos Del <span class="nom-producte ">Black</span></li>
-                            <li class="list-group-item ">
-                                <i class="fas fa-star "></i>
-                                <i class="fas fa-star "></i>
-                                <i class="fas fa-star-half-alt "></i>
-                                <i class="far fa-star "></i>
-                                <i class="far fa-star "></i>
-                            </li>
-                            <li class="list-group-item preu-producte ">$59.00</li>
-                            <li class="list-group-item ">
-                                <span class="icono-color " style="background-color: rgb(236, 137, 22); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                <span class="icono-color " style="background-color: rgb(76, 177, 76); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                <span class="icono-color " style="background-color: rgb(79, 87, 206); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                            </li>
-                        </ul>
-
                     </div>
-                </div>
+                    <div class="d-none d-md-inline d-xl-inline d-lg-inline col-3">
 
-                <div class="col-3 ">
-                    <div class="card " style="width: 100%; ">
+                        <div class="card" style="width: 100%; " data-bs-toggle="modal" data-bs-target="#modalProducte">
 
-                        <div class="div-item-producte ">
-                            <svg xmlns="http://www.w3.org/2000/svg " width="20 " height="20 " fill="currentColor " class="bi bi-heart " viewBox="0 0 16 16 ">
-                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8
-            2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z "/>
-                                </svg>
-                            <p class="item-producte-bundle ">Bundle</p>
+                            <div class="p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg " width="20 " height="20 " fill="currentColor " class="bi bi-heart " viewBox="0 0 16 16 ">
+                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z "/>
+                            </svg>
+                                <span class="item-producte-bundle float-end bg-warning rounded p-1">Bundle</span>
+                            </div>
+
+                            <img src="img/botella1.jpg" class="card-img-top" style="height:500px;" alt="img/botella1.jpg ">
+
+                            <ul class="list-group list-group-flush ">
+                                <li class="list-group-item">ELLA-HALOTHEMES</li>
+                                <li class="list-group-item"> <span class="fw-bold">Dlass Manten Tacitos</span><span class="float-end">Black</span></li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </li>
+                                <li class="list-group-item fw-bold">$59.00</li>
+                                <li class="list-group-item ">
+                                    <span class="rounded-circle" style="background-color: rgb(236, 137, 22); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                    <span class="rounded-circle" style="background-color: rgb(76, 177, 76); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                    <span class="rounded-circle" style="background-color: rgb(79, 87, 206); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                </li>
+                            </ul>
+
                         </div>
-
-                        <img src="img/botella1.jpg " class="card-img-top " alt="img/botella1.jpg ">
-
-                        <ul class="list-group list-group-flush ">
-                            <li class="list-group-item marca-producte ">ELLA-HALOTHEMES</li>
-                            <li class="list-group-item nom-producte ">Dlass Manten Tacitos Del <span class="nom-producte ">Black</span></li>
-                            <li class="list-group-item ">
-                                <i class="fas fa-star "></i>
-                                <i class="fas fa-star "></i>
-                                <i class="fas fa-star-half-alt "></i>
-                                <i class="far fa-star "></i>
-                                <i class="far fa-star "></i>
-                            </li>
-                            <li class="list-group-item preu-producte ">$59.00</li>
-                            <li class="list-group-item ">
-                                <span class="icono-color " style="background-color: rgb(236, 137, 22); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                <span class="icono-color " style="background-color: rgb(76, 177, 76); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                <span class="icono-color " style="background-color: rgb(79, 87, 206); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                            </li>
-                        </ul>
-
                     </div>
+                    <div class="d-none d-md-inline d-xl-inline d-lg-inline col-3">
+
+                        <div class="card" style="width: 100%; " data-bs-toggle="modal" data-bs-target="#modalProducte">
+
+                            <div class="p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg " width="20 " height="20 " fill="currentColor " class="bi bi-heart " viewBox="0 0 16 16 ">
+                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z "/>
+                            </svg>
+                                <span class="item-producte-bundle float-end bg-warning rounded p-1">Bundle</span>
+                            </div>
+
+                            <img src="img/botella1.jpg" class="card-img-top" style="height:500px;" alt="img/botella1.jpg ">
+
+                            <ul class="list-group list-group-flush ">
+                                <li class="list-group-item">ELLA-HALOTHEMES</li>
+                                <li class="list-group-item"> <span class="fw-bold">Dlass Manten Tacitos</span><span class="float-end">Black</span></li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </li>
+                                <li class="list-group-item fw-bold">$59.00</li>
+                                <li class="list-group-item ">
+                                    <span class="rounded-circle" style="background-color: rgb(236, 137, 22); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                    <span class="rounded-circle" style="background-color: rgb(76, 177, 76); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                    <span class="rounded-circle" style="background-color: rgb(79, 87, 206); ">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
-
         </div>
 
         <!-- Row opinio -->
         <div class="row">
 
-            <div class="col-12">
+            <div class="col-12 text-center mt-3">
 
                 <br>
                 <h3 class="">What Our Customers Say...</h3>
@@ -304,131 +563,177 @@
 
             </div>
 
-            <div class="">
+            <div class="row d-flex justify-content-around mt-2 mb-2">
 
-                <div class="">
+                <div class="col-1 d-flex align-items-center justify-content-center">
 
-                    <svg xmlns="http://www.w3.org/2000/svg " width="16 " height="16 " fill="currentColor " class="bi bi-arrow-left-square " viewBox="0 0 16 16 ">
+                    <svg xmlns="http://www.w3.org/2000/svg " width="30" height="30" fill="currentColor " class="bi bi-arrow-left-square " viewBox="0 0 16 16 ">
                         <path fill-rule="evenodd " d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm11.5 5.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z "/>
                     </svg>
 
                 </div>
-                <div class="">
 
-                    <div class=""></div>
-                    <div class="">
+                <div class="col-md-2 col-lg-2 col-xl-2 col-9">
 
-                        <i class="fas fa-star "></i>
-                        <i class="fas fa-star "></i>
-                        <i class="fas fa-star "></i>
-                        <i class="fas fa-star "></i>
-                        <i class="fas fa-star-half-alt "></i>
+                    <div class="row">
+
+                        <div class="col">
+
+                            <div class="row">
+                                <img src="img/customer-foto.PNG" class="img-fluid rounded-circle mx-auto" style="height:100%; width: 75%;">
+                            </div><br>
+
+                            <div class="col text-center">
+
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
 
 
+                            </div>
+
+                            <div class="col mt-3">
+
+                                <p class="fs-6 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, nihil aut dolorum assumenda natus obcaecati soluta?</p>
+
+                            </div>
+
+                            <div class="col">
+
+                                <p class="text-center fw-bold">- Annie, @annie_le, United Kingdom</p>
+
+                            </div>
+                        </div>
                     </div>
-                    <div class="">
 
-                        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, nihil aut dolorum assumenda natus obcaecati soluta?</p>
-
-                    </div>
-                    <div class="">
-
-
-                        <p class="">- Annie, @annie_le, United Kingdom</p>
-
-                    </div>
                 </div>
 
-                <div class="div-customer ">
+                <div class="d-none d-md-inline d-xl-inline d-lg-inline col-2">
 
-                    <div class="foto-customer "></div>
-                    <div class="estrelles-customer ">
+                    <div class="row">
 
-                        <i class="fas fa-star "></i>
-                        <i class="fas fa-star "></i>
-                        <i class="fas fa-star "></i>
-                        <i class="fas fa-star "></i>
-                        <i class="fas fa-star-half-alt "></i>
+                        <div class="col">
+
+                            <div class="row">
+                                <img src="img/customer-foto.PNG" class="img-fluid rounded-circle mx-auto" style="height:100%; width: 75%;">
+                            </div><br>
+
+                            <div class="col text-center">
+
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
 
 
+                            </div>
+
+                            <div class="col mt-3">
+
+                                <p class="fs-6 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, nihil aut dolorum assumenda natus obcaecati soluta?</p>
+
+                            </div>
+
+                            <div class="col">
+
+                                <p class="text-center fw-bold">- Annie, @annie_le, United Kingdom</p>
+
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-customer ">
 
-                        <p class="comentari-customer ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, nihil aut dolorum assumenda natus obcaecati soluta?</p>
-
-                    </div>
-                    <div class="reds-customer ">
-
-
-                        <p class="info-customer ">- Annie, @annie_le, United Kingdom</p>
-
-                    </div>
                 </div>
-                <div class="div-customer ">
 
-                    <div class="foto-customer "></div>
-                    <div class="estrelles-customer ">
+                <div class="d-none d-md-inline d-xl-inline d-lg-inline col-2">
 
-                        <i class="fas fa-star "></i>
-                        <i class="fas fa-star "></i>
-                        <i class="fas fa-star "></i>
-                        <i class="fas fa-star "></i>
-                        <i class="fas fa-star-half-alt "></i>
+                    <div class="row">
+
+                        <div class="col">
+
+                            <div class="row">
+                                <img src="img/customer-foto.PNG" class="img-fluid rounded-circle mx-auto" style="height:100%; width: 75%;">
+                            </div><br>
+
+                            <div class="col text-center">
+
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
 
 
+                            </div>
+
+                            <div class="col mt-3">
+
+                                <p class="fs-6 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, nihil aut dolorum assumenda natus obcaecati soluta?</p>
+
+                            </div>
+
+                            <div class="col">
+
+                                <p class="text-center fw-bold">- Annie, @annie_le, United Kingdom</p>
+
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-customer ">
 
-                        <p class="comentari-customer ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, nihil aut dolorum assumenda natus obcaecati soluta?</p>
-
-                    </div>
-                    <div class="reds-customer ">
-
-
-                        <p class="info-customer ">- Annie, @annie_le, United Kingdom</p>
-
-                    </div>
                 </div>
-                <div class="div-customer ">
 
-                    <div class="foto-customer "></div>
-                    <div class="estrelles-customer ">
+                <div class="d-none d-md-inline d-xl-inline d-lg-inline col-2">
 
-                        <i class="fas fa-star "></i>
-                        <i class="fas fa-star "></i>
-                        <i class="fas fa-star-half-alt "></i>
-                        <i class="far fa-star "></i>
-                        <i class="far fa-star "></i>
+                    <div class="row">
 
+                        <div class="col">
+
+                            <div class="row">
+                                <img src="img/customer-foto.PNG" class="img-fluid rounded-circle mx-auto" style="height:100%; width: 75%;">
+                            </div><br>
+
+                            <div class="col text-center">
+
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+
+
+                            </div>
+
+                            <div class="col mt-3">
+
+                                <p class="fs-6 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, nihil aut dolorum assumenda natus obcaecati soluta?</p>
+
+                            </div>
+
+                            <div class="col">
+
+                                <p class="text-center fw-bold">- Annie, @annie_le, United Kingdom</p>
+
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-customer ">
 
-                        <p class="comentari-customer ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, nihil aut dolorum assumenda natus obcaecati soluta?</p>
-
-                    </div>
-                    <div class="reds-customer ">
-
-
-                        <p class="info-customer ">- Annie, @annie_le, United Kingdom</p>
-
-                    </div>
                 </div>
-                <div class="fletxa-dreta ">
 
-                    <svg xmlns="http://www.w3.org/2000/svg " width="16 " height="16 " fill="currentColor " class="bi bi-arrow-right-square " viewBox="0 0 16 16 ">
-                        <path fill-rule="evenodd " d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm4.5 5.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0
-            0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z "/>
+                <div class="col-1 d-flex align-items-center justify-content-center">
+
+                    <svg xmlns="http://www.w3.org/2000/svg " width="30" height="30" fill="currentColor " class="bi bi-arrow-right-square " viewBox="0 0 16 16 ">
+                        <path fill-rule="evenodd " d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm4.5 5.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z "/>
                     </svg>
 
                 </div>
 
             </div>
 
-            <div class="nav-pointer ">
+            <div class="col-12 text-center">
 
-                <p id="nav ">
-
-                    <!-- <input type="radio "><input type="radio "><input type="radio "><input type="radio "> -->
+                <p>
 
                     <svg xmlns="http://www.w3.org/2000/svg " width="16 " height="16 " fill="currentColor " class="bi bi-circle " viewBox="0 0 16 16 ">
                         <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z " />
@@ -453,12 +758,372 @@
         </div>
 
         <!-- Row footer -->
-        <div class="row " id="footer ">
+        <footer>
+            <div class="row text-white bg-dark p-4 pt-5 ">
 
-            5
+                <section class="col-12 col-md-3 col-lg-3 col-xl-3">
 
+                    <div class="row">
+                        <div class="col">
+
+                            <img src="img/icono1.PNG"><br><br>
+                            <p class="opacity-75">
+                                685 Market Street<br> San Francisco, CA 24'05<br> United States<br><br> Call us: 623 234 523<br> From: admin@botiga.cat
+                            </p>
+
+                        </div>
+                    </div>
+
+                </section>
+                <section class="col-12 col-md-6 col-lg-6 col-xl-6">
+
+                    <div class="row">
+
+                        <div class="col-12 col-md-4 col-lg-4 col-xl-4">
+
+                            <h5>Shop by</h5><br>
+                            <ul class="list-unstyled opacity-75 d-none d-md-inline d-lg-inline d-xl-inline">
+                                <li>Aplication</li>
+                                <li>Disign & Styles</li>
+                                <li>Fanblade</li>
+                                <li>Wall code</li>
+                                <li>Telebravo</li>
+                                <li>Fanblade</li>
+                                <li>Wall code</li>
+                                <li>Telebravo</li>
+                            </ul>
+
+                        </div>
+                        <div class="col-12 col-md-4 col-lg-4 col-xl-4">
+
+                            <h5>Information</h5><br>
+                            <ul class="list-unstyled opacity-75 d-none d-md-inline d-lg-inline d-xl-inline">
+                                <li>About Us</li>
+                                <li>Blog</li>
+                                <li>Email</li>
+                                <li>About us</li>
+                                <li>Contact</li>
+                                <li>Fanblade</li>
+                                <li>Wall code</li>
+                                <li>Telebravo</li>
+                            </ul>
+
+                        </div>
+                        <div class="col-12 col-md-4 col-lg-4 col-xl-4">
+
+                            <h5>Customer Service</h5><br>
+                            <ul class="list-unstyled opacity-75 d-none d-md-inline d-lg-inline d-xl-inline">
+                                <li>Help & FAQs</li>
+                                <li>Patmen</li>
+                                <li>UiPath</li>
+                                <li>Politics</li>
+                                <li>Security policy</li>
+                                <li>Fanblade</li>
+                                <li>Wall code</li>
+                                <li>Telebravo</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </section>
+                <section class="col-3">
+
+                    <div class="row">
+                        <div class="col">
+
+                            <h5>Newsletter Sign Up</h5><br>
+                            <p class="opacity-75">Receive our latest updates about our products and promotions</p><br>
+                            <form class="row g-3 needs-validation">
+                                <div class="col-auto">
+                                    <label for="inputEmail" class="visually-hidden">Email</label>
+                                    <input type="email" id="inputEmail" class="form-control" placeholder="introduce your email" required>
+                                    <div class="invalid-feedback">
+                                        El format del correu no es correcte!
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <button type="submit" class="btn btn-iesmanacor mb-3">Submit</button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+
+                </section>
+
+            </div>
+        </footer>
+
+        <!-- OFF CANVAS CARRITO -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasRightLabel">Carrito de la compra</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+
+                <!-- ************CODI CARRITO *************** -->
+                <div id="container-carrito">
+
+                    <div id="div-capsalera-carrito">
+                        <div class="subdiv-capsalera">
+                            <p>3 items</p>
+                        </div>
+                        <div class="subdiv-capsalera">
+                            <div class="barra">64%</div>
+                        </div>
+                        <div class="subdiv-capsalera" style="margin-top: 13px;">
+                            <p>You qualify for free shipping!</p>
+                        </div>
+                    </div>
+
+                    <div id="div-productes-carrito">
+
+                        <div class="div-producte">
+                            <div class="producte-foto">
+                                <div class="foto"></div>
+                            </div>
+
+                            <div class="producte-dades">
+                                <div class="div-nom-producte">
+                                    <p class="nom-producte">Class Maptern Tacitos Del</p>
+                                </div>
+                                <div class="div-talla-producte">
+                                    <p class="talla"> S / Black K</p>
+                                </div>
+                                <div class="div-preu-producte">
+                                    <p class="linia-preu">
+                                        <span class="equis">$89.99</span>
+                                        <span class="eliminar">X</span>
+                                    </p>
+                                </div>
+                                <div class="div-q-producte">
+                                    <input type="number" value="1" id="input-carrito">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="div-producte">
+                            <div class="producte-foto">
+                                <div class="foto"></div>
+                            </div>
+                            <div class="producte-dades">
+                                <div class="div-nom-producte">
+                                    <p class="nom-producte">Class Maptern Tacitos Del</p>
+                                </div>
+                                <div class="div-talla-producte">
+                                    <p class="talla"> S / Black K</p>
+                                </div>
+                                <div class="div-preu-producte">
+                                    <p class="linia-preu">
+                                        <span class="equis">$89.99</span>
+                                        <span class="eliminar">X</span>
+                                    </p>
+
+                                </div>
+                                <div class="div-q-producte">
+                                    <input type="number" value="2" id="input-carrito">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div id="div-preu-carrito">
+
+                        <div id="row1-div-preu">
+
+                            <span class="total">Total</span>
+                            <span class="preu">$887.99</span>
+
+                        </div>
+                        <div id="row2-div-preu">
+
+                            <span class="shipping">Shipping</span>
+                            <span class="descrp">Taxes and shipping fee will be calculated at chekout</span>
+
+                        </div>
+
+                    </div>
+
+                    <div id="div-terms-carrito">
+
+                        <div id="subdiv-terms">
+                            <form>
+
+                                <p> <input type="checkbox" name="chekterms" id="chekterms" required> I agree with terms and conditions</p>
+                                <input type="submit" class="btn btn-secondary" value="Pagar">
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
         </div>
 
+        <!-- MODAL PRODUCTE -->
+        <div class="modal" tabindex="-1" id="modalProducte" data-bs-backdrop="static" data-bs-keyboard="false">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Producte</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="container">
+
+                            <div class="row">
+
+                                <!-- CARROUSEL PRODUCTE -->
+                                <div class="col-4">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <img src="img/botella1.jpg" alt="" style="height: 300px;">
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="row d-flex justify-content-around">
+                                                <div class="col-1 d-flex align-items-center justify-content-center">
+                                                    <i class="fas fa-angle-left"></i>
+                                                </div>
+                                                <div class="col-2">
+                                                    <img src="img/botella1.jpg" class="border-bottom border-dark" alt="" style="height: 70px;width: 50px;">
+                                                </div>
+                                                <div class="col-2">
+                                                    <img src="img/botella1.jpg" alt="" style="height: 70px;width: 50px;">
+                                                </div>
+                                                <div class="col-2">
+                                                    <img src="img/botella1.jpg" alt="" style="height: 70px;width: 50px;">
+                                                </div>
+                                                <div class="col-2">
+                                                    <img src="img/botella1.jpg" alt="" style="height: 70px;width: 50px;">
+                                                </div>
+
+                                                <div class="col-1 d-flex align-items-center justify-content-center">
+                                                    <i class="fas fa-angle-right"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- DADES PRODUCTE -->
+                                <div class="col-8">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="fw-bold">Cosmopoolis Namino Odi</p>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-5">
+
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+
+                                            </div>
+                                            <div class="col-7">
+                                                <span>No reviews</span>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-5">
+
+                                                <span>Brand:</span><br>
+                                                <span>Product Code:</span><br>
+                                                <span>Availability:</span>
+
+                                            </div>
+                                            <div class="col-7">
+                                                <span>Ella - Halothemes</span><br>
+                                                <span>KjSU-58636</span><br>
+                                                <span>10 in stock</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <p class="fw-bold">$59.00</p>
+                                        </div>
+
+                                        <div class="col-12">
+
+                                            <div class="row">
+
+                                                <div class="col-12 mb-3">Al vero pos et accusamus et justo odio dignissimos ducimus qui blanditis praesentium valuptatum delenti atque co...</div>
+
+                                                <div class="col-12 mb-3">
+                                                    <p>
+                                                        <span class="fw-bold">Size</span>
+                                                        <span>*</span>
+                                                        <span>XS</span>
+                                                        <span class="float-end text-decoration-underline ">Size Guide</span>
+                                                    </p>
+                                                    <span class="border border-dark rounded-circle p-1">XS</span>
+                                                    <span class="border border-dark rounded-circle p-1">&ensp;S&ensp;</span>
+                                                    <span class="border border-dark rounded-circle p-1">&ensp;M&ensp;</span>
+                                                    <span class="border border-dark rounded-circle p-1">&ensp;L&ensp;</span>
+                                                    <span class="border border-dark rounded-circle p-1">XL</span>
+                                                </div>
+                                                <div class="col-12 mb-3">
+                                                    <p>
+                                                        <span class="fw-bold">Color</span>
+                                                        <span>*</span>
+                                                        <span>slategray</span>
+                                                    </p>
+                                                    <span class="bg-dark rounded-circle">&ensp;&ensp;&ensp;</span>
+                                                    <span class="bg-primary rounded-circle">&ensp;&ensp;&ensp;</span>
+                                                    <span class="bg-secondary rounded-circle">&ensp;&ensp;&ensp;</span>
+                                                    <span class="bg-warning rounded-circle">&ensp;&ensp;&ensp;</span>
+                                                </div><br>
+                                                <div class="col-12 mb-3">
+                                                    <p>Quantity:</p>
+                                                    <input type="number" value="1">
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="col-12">
+                                            <input type="button" class="btn btn-dark btn-lg" name="" id="" value="ADD TO CART">
+                                            <svg xmlns="http://www.w3.org/2000/svg " width="20 " height="20 " fill="currentColor " class="bi bi-heart " viewBox="0 0 16 16 ">
+                                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z "/>
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
+                                                <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+                                              </svg><br>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                                <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                                            </svg><span>165 customers are viewing this product</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 
 </body>

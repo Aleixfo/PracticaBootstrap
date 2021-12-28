@@ -1,0 +1,84 @@
+// Custom.scss
+// Option B: Include parts of Bootstrap
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/root";
+
+// 4. Include any optional Bootstrap CSS as needed
+@import "node_modules/bootstrap/scss/utilities";
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/type";
+@import "node_modules/bootstrap/scss/images";
+@import "node_modules/bootstrap/scss/containers";
+@import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/helpers";
+
+// 5. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "node_modules/bootstrap/scss/utilities/api";
+
+//Declaram les variables amb els colors
+//Colors comuns de bootstrap
+$primary:#0074d9;
+$secondary:#697b8b;
+$success:#25b851;
+$info:#5ca9ec;
+$warning:#b7d62c;
+$danger:#ff4136;
+$light:#bbcbda;
+$dark:#1d1e1f;
+//Colors Nous (Customs)
+$iesmanacor: #b5dd74;
+
+//Canviam els colors de bootstrap pels desitjats
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+
+//Afegim colors nous personalitzats
+$custom-colors: (
+    "iesmanacor": $iesmanacor
+);
+
+//Feim un merge dels colors ja definits i els nous
+$theme-colors: map-merge($theme-colors, $custom-colors);
+$theme-colors-rgb: map-merge($theme-colors-rgb, $custom-colors);
+$utilities-bg-colors: map-merge($utilities-bg-colors, $custom-colors);
+$utilities-text-colors: map-merge($utilities-text-colors, $custom-colors);
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+/*Importam tot es bootstrap*/
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// Estils personalitzats en es final sempre
+.iesmanacor{
+    background-color: $yellow-600;
+}
+  
+img{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+

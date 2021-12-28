@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* */
+#div-capsalera-carrito {
+    width: 100%;
+    height: 110px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 5px;
+}
+
+.subdiv-capsalera {
+    height: 33%;
+    width: 100%;
+}
+
+.subdiv-capsalera p {
+    color: gray;
+    font-size: 17px;
+}
+
+.barra {
+    width: 64%;
+    height: 98%;
+    background-color: green;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 800;
+    color: white;
+    padding-top: 2px;
+}
+
+
+/* */
+
+#div-productes-carrito {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.div-producte {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    border-bottom: 1px solid lightgray;
+    padding-top: 15px;
+}
+
+.producte-foto {
+    height: 100%;
+    width: 40%;
+    padding-top: 10px;
+}
+
+.foto {
+    height: 80%;
+    width: 90%;
+    margin: auto;
+    background-image: url("../img/botella1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.producte-dades {
+    height: 100%;
+    width: 60%;
+}
+
+.div-nom-producte {
+    width: 100%;
+    height: 20%;
+}
+
+.nom-producte {
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.div-talla-producte {
+    width: 100%;
+    height: 20%;
+}
+
+.talla {
+    font-size: 15px;
+}
+
+.div-preu-producte {
+    width: 100%;
+    height: 20%;
+}
+
+.equis {
+    font-weight: 800;
+    font-size: 17px;
+}
+
+.eliminar {
+    float: right;
+    font-size: 25px;
+    margin-right: 10px;
+    color: gray;
+}
+
+.div-q-producte {
+    width: 100%;
+    height: 40%;
+}
+
+
+/* */
+
+#div-preu-carrito {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-flow: column nowrap;
+    padding-top: 15px;
+    border-bottom: 1px solid lightgray;
+}
+
+#row1-div-preu {
+    height: 50%;
+    width: 100%;
+}
+
+.total,
+.shipping {
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.preu {
+    float: right;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+#row2-div-preu {
+    height: 50%;
+    width: 100%;
+}
+
+#input-carrito {
+    text-align: center;
+    width: 90px;
+    height: 50px;
+    border-radius: 3px;
+    border: 2px solid lightgray;
+}
+
+.descrp {
+    float: right;
+    font-size: 15px;
+    color: gray;
+    width: 60%;
+    text-align: right;
+}
+
+
+/* */
+
+#div-terms-carrito {
+    width: 100%;
+    height: 70px;
+    padding-top: 15px;
+}
+
+#div-terms-carrito p {
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+#chekterms {
+    width: 17px;
+    height: 17px;
+    margin-right: 5px;
+}
